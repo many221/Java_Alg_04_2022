@@ -1,7 +1,6 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Iterator;
+import java.util.Objects;
 
 public class Jackpot {
 
@@ -15,7 +14,7 @@ public class Jackpot {
 
             String element = result[i];
 
-            if (element == firstIndex){
+            if (Objects.equals ( element, firstIndex )){
 
                 count ++;
 
@@ -23,11 +22,12 @@ public class Jackpot {
 
         }
 
-        if (count == result.length){
+        return count == result.length;
 
-            return true;
 
-        }else return false;
+
+
+
 
         /*
 
